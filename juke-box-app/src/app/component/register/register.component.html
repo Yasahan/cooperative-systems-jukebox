@@ -1,0 +1,13 @@
+<form style="width: 40%; margin: 10% auto auto;">
+  <div class="form-group">
+    <label for="userName">Username</label>
+    <input ngModel class="form-control" id="userName" name="userName" #userName="ngModel" required type="text">
+    <div *ngIf="userName.invalid && (userName.dirty || userName.touched)"
+         class="alert alert-danger">
+      <div *ngIf="userName.errors.required">
+        Username is required.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" style="float: right" type="submit">Submit</button>
+</form>
