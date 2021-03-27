@@ -1,7 +1,12 @@
+import {User} from "./User";
+
 export class Song {
 
-  titel:string;
+  title:string;
   artist:string;
   duration:string;
+  votes:number;
+  users:User[];
+
 
 }

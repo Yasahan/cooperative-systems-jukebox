@@ -7,13 +7,15 @@ import { PlaylistComponent } from './component/playlist/playlist.component';
 import { SongComponent } from './component/song/song.component';
 import { RegisterComponent } from './component/register/register.component';
 import {FormsModule} from "@angular/forms";
+import { MainMenuComponent } from './component/main-menu/main-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlaylistComponent,
     SongComponent,
-    RegisterComponent
+    RegisterComponent,
+    MainMenuComponent
   ],
   imports: [
     BrowserModule,

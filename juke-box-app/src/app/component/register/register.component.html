@@ -1,4 +1,4 @@
-<form #registerForm="ngForm" style="padding: 10%; margin-top: 30%" (ngSubmit)="addUser(registerForm)">
+<form #registerForm="ngForm" style="padding: 10%;" (ngSubmit)="addUser(registerForm)">
   <div>
     <div class="d-flex justify-content-center">
       <label for="userName">Username</label>
@@ -29,7 +29,7 @@
   </div>
 </form>
 
-<div *ngFor="let user of users" style="margin-left: 30%;">
+<div class="d-flex justify-content-center" *ngFor="let user of users">
   {{ user | json }}
   <br>
   <br>
