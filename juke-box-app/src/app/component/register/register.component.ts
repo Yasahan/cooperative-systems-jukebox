@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {User} from "../../model/User";
+import {newArray} from "@angular/compiler/src/util";
 
 @Component({
   selector: 'register',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  users: User[] = [];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.users.push(new User("Yasahan"));
   }
+
+  addUser(registerForm) {
+    console.log(registerForm)
+    this.users.push(new User(registerForm.value.userName))
+    registerForm.reset();
+  }
+
 
 }
